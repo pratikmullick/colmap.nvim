@@ -2,6 +2,18 @@
 A colorscheme-mapping plugin for Neovim colorscheme where chosen directories
 have their own colorschemes set through a CSV file.
 
+## Contents
+- [Features](#features)
+- [Installation](#installation)
+  - [lazy.nvim](#lazynvim)
+  - [packer.nvim](#packernvim)
+- [Configuration](#configuration)
+  - [CSV Format](#csv-format)
+- [Limitations](#limitations)
+- [License](#license)
+- [How to Contribute](#how-to-contribute)
+- [Support](#support)
+
 ## Features
 - Automatically apply colorschemes when:
   - Loading a new file
@@ -77,10 +89,12 @@ programs that use CSV as a data storage medium.
 - Case-sensitive matching (currently no case-insensitivity)
 
 ## License
-
+(C) 2026, Pratik Mullick
+This project is licensed under the Apache License 2.0 - see the
+[LICENSE](LICENSE) file for details.
 
 ## How to Contribute
-1. Fork the repository and add a "Star" ()
+1. Fork the repository and "Star" It (⭐)
 2. Create a pull request with your changes
 3. Update the documentation if you add new features
 4. Translate the documentation to your language
