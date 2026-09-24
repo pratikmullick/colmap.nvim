@@ -36,7 +36,7 @@ return {
     opts = {
     -- Optional Configuration Overrides
     default_theme = "zellner",
-    -- csv_path = "/path/to/custom/theme_mapping.csv"
+    -- csv_path = "/path/to/custom/theme_map.csv"
     },
   },
 }
@@ -50,22 +50,17 @@ use({
     require("colmap").setup({
       -- Optional Configuration Overrides
       default_theme = "zellner",
-      -- csv_path = "/path/to/custom/theme_mapping.csv"
+      -- csv_path = "/path/to/custom/theme_map.csv"
     })
   end,
 })
 ```
 
 ## Configuration
-Directory mappings are configured using a plain text CSV file, located by
-default at the base of the Neovim configuration directory, with an example CSV
-file look something like:
-
-```csv
-/path/to/colmap.nvim, solarized
-~/Documents/,gruvbox
-C:\Users\user\Documents\project, solarized
-```
+Directory mappings are configured using a plain text CSV file, located at the
+base of the Neovim configuration directory named `theme_map.csv` by default.
+Otherwise, the plugin can be configured to use a different CSV file at a custom
+location during installation, with examples shown above.
 
 ### CSV Format
 The CSV file should contain entries in the format:
