@@ -31,8 +31,12 @@ function M.setup(user_opts)
       if not line:match("^%s*#") and line:match("%S") then
         local folder_path, colorscheme = line:match("^(.+),([^,]+)$")
         if folder_path and colorscheme then
+          -- Trim whitespace
           local dp = folder_path:match("^%s*(.-)%s*$") or folder_path
           local cs = colorscheme:match("^%s*(.-)%s*$") or colorscheme
+          -- Strip single or double quotes
+          dp = dp:match('^"(.*)"$') or dp:match("^'(.*)'$") or dp
+          cs = cs:match('^"(.*)"$') or cs:match("^'(.*)'$") or cs
           if type(dp) == "string" and dp ~= "" and type(cs) == "string" and cs ~= "" then
             -- Normalize path to handle trailing slashes and OS differences
             table.insert(theme_list, { path = vim.fs.normalize(dp), theme = cs })
